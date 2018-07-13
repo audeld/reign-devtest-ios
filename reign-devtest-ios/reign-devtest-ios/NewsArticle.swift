@@ -15,4 +15,5 @@ class NewsArticle {
     var creator : String = ""
     var createdDate : String = ""
     var creationDateI : Double = 0
+    var articleId : String = ""
 }

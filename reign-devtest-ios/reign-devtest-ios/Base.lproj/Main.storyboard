@@ -82,21 +82,25 @@
         <!--Article Website View Controller-->
         <scene sceneID="Uzy-51-Qak">
             <objects>
-                <viewController id="1es-Pb-wGI" customClass="ArticleWebsiteViewController" customModule="reign_devtest_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newsArticleIdForViewController" id="1es-Pb-wGI" customClass="ArticleWebsiteViewController" customModule="reign_devtest_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Bz-Po-6sm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiG-3y-Sdb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="kZI-kq-vj3">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5H5-zb-ypF"/>
+                                    <navigationItem id="kZI-kq-vj3">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5H5-zb-ypF">
+                                            <connections>
+                                                <action selector="didTouchBackButton:" destination="1es-Pb-wGI" id="cgf-rC-XFX"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-BJ-XOm">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -104,7 +108,7 @@
                         <constraints>
                             <constraint firstItem="AXI-BJ-XOm" firstAttribute="top" secondItem="XiG-3y-Sdb" secondAttribute="bottom" id="3np-L8-UN0"/>
                             <constraint firstItem="AXI-BJ-XOm" firstAttribute="trailing" secondItem="6TT-DK-8DF" secondAttribute="trailing" id="6WF-jk-z1R"/>
-                            <constraint firstItem="XiG-3y-Sdb" firstAttribute="top" secondItem="0Bz-Po-6sm" secondAttribute="top" id="9Yc-ek-fjw"/>
+                            <constraint firstItem="XiG-3y-Sdb" firstAttribute="top" secondItem="0Bz-Po-6sm" secondAttribute="top" constant="10" id="9Yc-ek-fjw"/>
                             <constraint firstItem="AXI-BJ-XOm" firstAttribute="leading" secondItem="6TT-DK-8DF" secondAttribute="leading" id="KJC-Sc-t4p"/>
                             <constraint firstItem="XiG-3y-Sdb" firstAttribute="trailing" secondItem="6TT-DK-8DF" secondAttribute="trailing" id="T78-zE-n4Z"/>
                             <constraint firstItem="AXI-BJ-XOm" firstAttribute="bottom" secondItem="6TT-DK-8DF" secondAttribute="bottom" id="YVW-f6-DuK"/>
@@ -118,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAv-yN-Y8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864.79999999999995" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1108" y="134"/>
         </scene>
     </scenes>
 </document>

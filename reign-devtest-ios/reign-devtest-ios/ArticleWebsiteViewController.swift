@@ -17,7 +17,8 @@ class ArticleWebsiteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = NSURL (string: "https://www.simplifiedios.net");
+        //let url = NSURL (string: "https://www.simplifiedios.net");
+        let url = NSURL (string: articleLink);
         let request = NSURLRequest(url: url! as URL)
         webView.loadRequest(request as URLRequest);
     }
@@ -27,7 +28,13 @@ class ArticleWebsiteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func didTouchBackButton(_ sender: UIBarButtonItem) {
+    
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
